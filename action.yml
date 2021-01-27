@@ -7,12 +7,16 @@ inputs:
   gcr_host:
     description: 'Google Container Registry Host'
     default: 'gcr.io'
+    required: false
   image_name:
     description: 'Docker Image Name'
     required: true
   image_tag:
     description: 'Docker Image Tag'
     required: true
+outputs:
+  image_url:
+    description: 'Full gcr.io image url'
 runs:
   using: 'docker'
   image: 'Dockerfile'
